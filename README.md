@@ -14,6 +14,10 @@ Este projeto é uma aplicação desenvolvida com **ASP.NET Core Web API**, volta
 
 Este projeto foi idealizado para facilitar a administração de uma hamburgueria, permitindo que os funcionários possam gerenciar os pedidos de forma eficiente e os clientes possam criar contas para facilitar suas compras.
 
+## Repositório do Frontend
+
+Para entender a fundo a estrutura e as funcionalidades do backend, acesse o repositório da API: [Sistema de Hamburgueria API](https://github.com/GabrielFernandesO/BurgerMongoFrontEnd) (substitua pelo link correto).
+
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
