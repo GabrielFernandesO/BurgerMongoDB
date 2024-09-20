@@ -16,7 +16,7 @@ Este projeto foi idealizado para facilitar a administração de uma hamburgueria
 
 ## Repositório do Frontend
 
-Para entender a fundo a estrutura e as funcionalidades do backend, acesse o repositório da API: [Sistema de Hamburgueria API](https://github.com/GabrielFernandesO/BurgerMongoFrontEnd) (substitua pelo link correto).
+Para entender a fundo a estrutura e as funcionalidades do backend, acesse o repositório da API: [Sistema de Hamburgueria Frontend](https://github.com/GabrielFernandesO/BurgerMongoFrontEnd) (substitua pelo link correto).
 
 ## Contribuição
 
