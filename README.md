@@ -13,9 +13,9 @@ Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
 
 Contato
-email: gabrielgnsr2000@hotmail.com
+Para dúvidas ou sugestões, você pode me contatar pelo e-mail: gabrielgnsr2000@hotmail.com.
 
-FrontEnd do Projeto
-Repositório do front-end deste projeto: https://github.com/GabrielFernandesO/BurgerMongoFrontEnd
+Apresentação do Projeto
+Confira a apresentação do projeto no YouTube: Link para o vídeo (substitua pelo link correto).
 
-Qualquer dúvida estou a disposição!
+Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato!
