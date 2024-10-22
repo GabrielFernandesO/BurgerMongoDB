@@ -8,12 +8,14 @@ namespace BurgerMongoDB.Services.User
     public class userService : IUserService
     {
 
-
+        //Interface mongocollection and objects collections of userModel
         private readonly IMongoCollection<userModel> _users;
 
         public userService(IDatabase settings, IMongoClient mongoClient)
         {
+            //database
             var database = mongoClient.GetDatabase(settings.Database);
+            //specific table of database (collection fromd db)
             _users = database.GetCollection<userModel>(settings.CollectionDB);
         }
 

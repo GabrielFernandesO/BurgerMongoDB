@@ -1,7 +1,5 @@
 ﻿using BurgerAPI.Services.OrderService;
 using BurgerMongoDB.Models;
-using BurgerMongoDB.Services.OptiosBurger;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BurgerMongoDB.Controllers

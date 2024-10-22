@@ -18,6 +18,7 @@ namespace BurgerMongoDB.Models
 
         [BsonElement("password")]
         public string password { get; set; } = string.Empty;
+
         [BsonElement("isAdmin")]
         public bool isAdmin { get; set; } = false;
 

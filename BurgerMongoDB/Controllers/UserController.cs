@@ -1,5 +1,4 @@
 ﻿using BurgerMongoDB.DTOs;
-using BurgerMongoDB.Models;
 using BurgerMongoDB.Services.User;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,67 +18,37 @@ namespace BurgerMongoDB.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<loginResponse>> Login(loginDTO loginDTO)
         {
-            return Ok(await _userService.Login(loginDTO));
-        }
+            var response = await _userService.Login(loginDTO);
 
+            if (response.flag)
+            {
+                return Ok(response); // 200 OK
+            }
+            else if (response.message == "User not Found")
+            {
+                return NotFound(response); // 404 Not Found
+            }
+            else
+            {
+                return Unauthorized(response); // 401 Unauthorized
+            }
+        }
 
         [HttpPost("register")]
-        public async Task<ActionResult<loginResponse>> Register(registerDTO registerDTO)
+        public async Task<ActionResult<registerResponse>> Register(registerDTO registerDTO)
         {
-            return Ok(await _userService.Register(registerDTO));
+            var response = await _userService.Register(registerDTO);
+
+            if (response.flag)
+            {
+                return CreatedAtAction(nameof(Login), new { }, response); // 201 Created
+            }
+            else if (response.message == "User exists")
+            {
+                return Conflict(response); // 409 Conflict
+            }
+
+            return BadRequest(response); // 400 Bad Request
         }
-
-        //[HttpGet("{id}")]
-        //public ActionResult<userModel> Get(string id)
-        //{
-        //    var user = _userService.Get(id);
-
-        //    if(user == null)
-        //    {
-        //        return NotFound("Nada encontrado");
-        //    }
-
-        //    return Ok(user);
-        //}
-
-        //[HttpPost]
-        //public ActionResult Post([FromBody] userModel user)
-        //{
-        //    _userService.create(user);
-
-        //    return CreatedAtAction(nameof(Get), new { id = user.id }, user);
-        //}
-
-        //[HttpPut]
-        //public ActionResult Put(string id, [FromBody] userModel user)
-        //{
-        //    var existUser = _userService.Get(id);
-
-        //    if(existUser == null)
-        //    {
-        //        return NotFound("Id nao existe");
-        //    }
-
-        //    _userService.Update(id, user);
-
-        //    return NoContent();
-        //}
-
-        //[HttpDelete("{id}")]
-        //public ActionResult Delete(string id)
-        //{
-        //    var user = _userService?.Get(id);
-
-        //    if(user == null)
-        //    {
-        //        return NotFound("User nao encotnrado");
-        //    }
-
-        //    _userService.Remove(user.id);
-
-        //    return Ok("User deletado");
-
-        //}
-
     }
 }
