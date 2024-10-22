@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(auth-routes)/burger-order/page": "app/(auth-routes)/burger-order/page.js",
+  "/(public-routes)/burger-register/page": "app/(public-routes)/burger-register/page.js",
+  "/(public-routes)/burger-login/page": "app/(public-routes)/burger-login/page.js",
+  "/(auth-routes)/burger-orders/page": "app/(auth-routes)/burger-orders/page.js",
+  "/admin/adminOrders/page": "app/admin/adminOrders/page.js",
+  "/(auth-routes)/burger-profile/page": "app/(auth-routes)/burger-profile/page.js",
+  "/(public-routes)/(home)/page": "app/(public-routes)/(home)/page.js"
+}
